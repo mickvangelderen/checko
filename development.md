@@ -1,6 +1,6 @@
 # Development guide
 
-This guide is for people who want to modify NODE_PACKAGE_SKELETON_NAME.
+This guide is for people who want to modify checko.
 
 ## Setup
 
