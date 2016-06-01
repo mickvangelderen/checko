@@ -1,6 +1,8 @@
-![Checko the gecko](media/gecko.jpg)
+<div align="center">
+    <img src="media/gecko.jpg" alt="Checko the gecko"/>
+    <p>There is a new sherrif in town to check your values for type and range errors! :police_car:</p>
+</div>
 
-There is a new Sherrif in town to check your values for type and range errors! :police_car:
 
 # Mindset
 
@@ -10,7 +12,7 @@ Simplicity ->
 
 For some 'expect' variants there is no 'is' variant because the language itself provides an operator. 
 
-| Is                 | Expect                       |
+| Predicate          | Assertion                    |
 |--------------------|------------------------------|
 | value === expected | expectEqual(expected, value) |
 | isArray(value)     | expectArray(value)           |
