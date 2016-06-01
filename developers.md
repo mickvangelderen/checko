@@ -1,4 +1,4 @@
-# Development guide
+# Developers' guide
 
 This guide is for people who want to modify checko.
 
@@ -13,7 +13,7 @@ The `npm run setup` command installs git hooks so you don't forget to do  lint, 
 
 ## Code
 
-The code can be found in the [`src/`](src) directory. It will be transpiled to the `lib/` directory which is ignored by `git` but not by `npm`. 
+The code can be found in the [exports/](exports) folder. Files essential to the publishing and functioning of this package are created in the build/ folder. 
 
 ## Scripts
 
@@ -45,4 +45,4 @@ Simply use [`npm version <version>`](https://docs.npmjs.com/cli/version) and [`n
 * Asserted with [must](https://www.npmjs.com/package/must).
 * Linted with [eslint](http://eslint.org/) and its recommended settings which I feel are good enough.
 * Tested with [mocha](http://mochajs.org/).
-* Transpiled with [babel](https://babeljs.io/) from es2015 to node5. 
+* Transpiled with [babel](https://babeljs.io/) from es2015. 

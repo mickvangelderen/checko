@@ -3,22 +3,17 @@
     <p>There is a new sherrif in town to check your values for type and range errors! :police_car:</p>
 </div>
 
+# Motivation
 
-# Mindset
+I needed predicates and assertions for type and range checking that:
 
-TODO
-Simplicity ->
-    use TypeError for value type comparisons and RangeError for value comparisons
-
-For some 'expect' variants there is no 'is' variant because the language itself provides an operator. 
-
-| Predicate          | Assertion                    |
-|--------------------|------------------------------|
-| value === expected | expectEqual(expected, value) |
-| isArray(value)     | expectArray(value)           |
-
-User friendly stack traces -> no es6 modules
-Use only what you need -> require('checko/exports/assertArray')
+ * have a fast and simple implementation,
+ * only check for what their name implies,
+ * yield standard errors,
+ * yield readable stack traces,
+ * can be included when needed,
+ * can be used to create custom predicates and assertions and
+ * do.not.use.this.style()
 
 # Installation
 
@@ -40,12 +35,23 @@ import { expectArray } from 'checko'
 
 # Documentation
 
-Since the code is quite simple, look up implementation details and edge cases in the code and/or tests themselves. The information you need is well organized due to the modular nature of checko. 
+For some 'expect' variants there is no 'is' variant because the language itself provides an operator. 
+
+| Predicate          | Assertion                    |
+|--------------------|------------------------------|
+| value === expected | expectEqual(expected, value) |
+| isArray(value)     | expectArray(value)           |
+
+All files in [exports/](exports/) can be directly included. Implementations for each predicate and assertion can be found there. Examples are shown in the accompanying `.test.js`. 
+
+I've refrained from using ES2015 modules because the code it transpiles to a lot harder to read. 
+
+Due to the simple nature of this package (except for the `isDeepEqual(expected, value)` implementation) there is no further documentation. If this is a problem, please let me know.
 
 # Thanks
 
 This project uses [node-package-skeleton](https://github.com/mickvangelderen/node-package-skeleton) as a starting point for package development. 
 
-# Other guides
+# Other documents
 
-* [Development guide](development.md)
+* [Developers' guide](developers.md)
