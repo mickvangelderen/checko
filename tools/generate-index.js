@@ -1,6 +1,6 @@
-import { readdirSync } from 'fs'
-import { writeFileSync } from 'fs'
-import { basename } from 'path'
+const basename = require('path').basename
+const readdirSync = require('fs').readdirSync
+const writeFileSync = require('fs').writeFileSync
 
 const exportStatements = readdirSync('exports/')
 .filter(filename => /\.test\.js$/.test(filename) === false)

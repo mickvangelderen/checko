@@ -39,7 +39,7 @@
     "build": "babel exports --out-dir build/exports --ignore \"*.test.js\" && cp package.json build/ && cp readme.md build/",
     "check-node-version": "babel-node tools/check-node-version",
     "clean": "rm -rf build",
-    "generate-index": "babel-node tools/generate-index",
+    "generate-index": "node tools/generate-index",
     "lint": "eslint exports test",
     "post-checkout": "npm run -s resume",
     "post-merge": "npm run -s resume",
