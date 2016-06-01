@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-import expectUint16Array from './expectUint16Array'
-import expect from 'must'
-import relativePath from '../test/relativePath'
+const expectUint16Array = require('./expectUint16Array')
+const expect = require('must')
+const relativePath = require('../test/relativePath')
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

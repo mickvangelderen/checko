@@ -4,4 +4,4 @@ function isError(value) {
 	return objectToString.call(value) === '[object Error]'
 }
 
-export default isError
+module.exports = isError

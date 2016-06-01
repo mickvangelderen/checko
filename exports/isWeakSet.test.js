@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-import isWeakSet from './isWeakSet'
-import expect from 'must'
-import relativePath from '../test/relativePath'
+const isWeakSet = require('./isWeakSet')
+const expect = require('must')
+const relativePath = require('../test/relativePath')
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

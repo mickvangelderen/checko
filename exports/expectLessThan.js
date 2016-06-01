@@ -1,8 +1,8 @@
-import inspect from './inspect'
+const inspect = require('./inspect')
 
 function expectLessThan(less, value) {
 	if (value < less) return value
-	throw new TypeError(`Expected ${inspect(value)} to be less than ${inspect(less)}.`)
+	throw new RangeError(`Expected ${inspect(value)} to be less than ${inspect(less)}.`)
 }
 
-export default expectLessThan
+module.exports = expectLessThan

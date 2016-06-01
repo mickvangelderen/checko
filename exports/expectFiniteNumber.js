@@ -1,9 +1,9 @@
-import inspect from './inspect'
-import isFiniteNumber from './isFiniteNumber'
+const inspect = require('./inspect')
+const isFiniteNumber = require('./isFiniteNumber')
 
 function expectFiniteNumber(value) {
 	if (isFiniteNumber(value)) return value
-	throw new TypeError(`Expected ${inspect(value)} to be a finite number.`)
+	throw new RangeError(`Expected ${inspect(value)} to be a finite number.`)
 }
 
-export default expectFiniteNumber
+module.exports = expectFiniteNumber

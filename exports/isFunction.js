@@ -2,4 +2,4 @@ function isFunction(value) {
 	return typeof value === 'function'
 }
 
-export default isFunction
+module.exports = isFunction

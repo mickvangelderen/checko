@@ -1,8 +1,8 @@
-import inspect from './inspect'
+const inspect = require('./inspect')
 
 function expectTrue(value) {
 	if (value === true) return value
-	throw new TypeError(`Expected ${inspect(value)} to equal true.`)
+	throw new RangeError(`Expected ${inspect(value)} to equal true.`)
 }
 
-export default expectTrue
+module.exports = expectTrue

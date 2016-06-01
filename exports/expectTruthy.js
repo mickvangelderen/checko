@@ -1,8 +1,8 @@
-import inspect from './inspect'
+const inspect = require('./inspect')
 
 function expectTruthy(value) {
 	if (value) return value
-	throw new TypeError(`Expected ${inspect(value)} to be truthy.`)
+	throw new RangeError(`Expected ${inspect(value)} to be truthy.`)
 }
 
-export default expectTruthy
+module.exports = expectTruthy

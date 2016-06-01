@@ -1,8 +1,8 @@
-import inspect from './inspect'
+const inspect = require('./inspect')
 
 function expectLooseEqual(equal, value) {
 	if (value == equal) return value
-	throw new TypeError(`Expected ${inspect(value)} to loosely equal ${inspect(equal)}.`)
+	throw new RangeError(`Expected ${inspect(value)} to loosely equal ${inspect(equal)}.`)
 }
 
-export default expectLooseEqual
+module.exports = expectLooseEqual

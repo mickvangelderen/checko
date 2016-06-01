@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-import expectUint8ClampedArray from './expectUint8ClampedArray'
-import expect from 'must'
-import relativePath from '../test/relativePath'
+const expectUint8ClampedArray = require('./expectUint8ClampedArray')
+const expect = require('must')
+const relativePath = require('../test/relativePath')
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

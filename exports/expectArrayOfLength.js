@@ -1,5 +1,5 @@
-import expectArray from './expectArray'
-import expectEqual from './expectEqual'
+const expectArray = require('./expectArray')
+const expectEqual = require('./expectEqual')
 
 function expectArrayOfLength(length, value) {
 	expectArray(value)
@@ -7,4 +7,4 @@ function expectArrayOfLength(length, value) {
 	return value
 }
 
-export default expectArrayOfLength
+module.exports = expectArrayOfLength

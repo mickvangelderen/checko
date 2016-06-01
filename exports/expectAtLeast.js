@@ -1,8 +1,8 @@
-import inspect from './inspect'
+const inspect = require('./inspect')
 
 function expectAtLeast(least, value) {
 	if (value >= least) return value
-	throw new TypeError(`Expected ${inspect(value)} to be at least ${inspect(least)}.`)
+	throw new RangeError(`Expected ${inspect(value)} to be at least ${inspect(least)}.`)
 }
 
-export default expectAtLeast
+module.exports = expectAtLeast

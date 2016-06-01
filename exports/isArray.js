@@ -6,4 +6,4 @@ const isArray = Array.isArray
 		objectToString.call(value) === '[object Array]'
 	}
 
-export default isArray
+module.exports = isArray

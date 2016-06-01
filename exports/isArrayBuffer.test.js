@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-import isArrayBuffer from './isArrayBuffer'
-import expect from 'must'
-import relativePath from '../test/relativePath'
+const isArrayBuffer = require('./isArrayBuffer')
+const expect = require('must')
+const relativePath = require('../test/relativePath')
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

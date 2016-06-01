@@ -1,85 +1,89 @@
-export { default as expectArguments } from './expectArguments'
-export { default as expectArrayBuffer } from './expectArrayBuffer'
-export { default as expectArray } from './expectArray'
-export { default as expectArrayOfLength } from './expectArrayOfLength'
-export { default as expectAtLeast } from './expectAtLeast'
-export { default as expectAtMost } from './expectAtMost'
-export { default as expectBoolean } from './expectBoolean'
-export { default as expectDataView } from './expectDataView'
-export { default as expectDate } from './expectDate'
-export { default as expectDeepEqual } from './expectDeepEqual'
-export { default as expectEqual } from './expectEqual'
-export { default as expectError } from './expectError'
-export { default as expectFalse } from './expectFalse'
-export { default as expectFalsy } from './expectFalsy'
-export { default as expectFiniteNumber } from './expectFiniteNumber'
-export { default as expectFloat32Array } from './expectFloat32Array'
-export { default as expectFloat64Array } from './expectFloat64Array'
-export { default as expectFunction } from './expectFunction'
-export { default as expectFunctionOfArity } from './expectFunctionOfArity'
-export { default as expectGeneratorFunction } from './expectGeneratorFunction'
-export { default as expectInfiniteNumber } from './expectInfiniteNumber'
-export { default as expectInt16Array } from './expectInt16Array'
-export { default as expectInt32Array } from './expectInt32Array'
-export { default as expectInt8Array } from './expectInt8Array'
-export { default as expectLessThan } from './expectLessThan'
-export { default as expectLooseEqual } from './expectLooseEqual'
-export { default as expectMap } from './expectMap'
-export { default as expectMoreThan } from './expectMoreThan'
-export { default as expectNaN } from './expectNaN'
-export { default as expectNegativeInfinity } from './expectNegativeInfinity'
-export { default as expectNotEqual } from './expectNotEqual'
-export { default as expectNull } from './expectNull'
-export { default as expectNumber } from './expectNumber'
-export { default as expectObject } from './expectObject'
-export { default as expectOwnProperty } from './expectOwnProperty'
-export { default as expectPositiveInfinity } from './expectPositiveInfinity'
-export { default as expectProperty } from './expectProperty'
-export { default as expectRegExp } from './expectRegExp'
-export { default as expectSet } from './expectSet'
-export { default as expectString } from './expectString'
-export { default as expectSymbol } from './expectSymbol'
-export { default as expectTrue } from './expectTrue'
-export { default as expectTruthy } from './expectTruthy'
-export { default as expectUint16Array } from './expectUint16Array'
-export { default as expectUint32Array } from './expectUint32Array'
-export { default as expectUint8Array } from './expectUint8Array'
-export { default as expectUint8ClampedArray } from './expectUint8ClampedArray'
-export { default as expectUndefined } from './expectUndefined'
-export { default as expectWeakMap } from './expectWeakMap'
-export { default as expectWeakSet } from './expectWeakSet'
-export { default as hasOwnProperty } from './hasOwnProperty'
-export { default as inspect } from './inspect'
-export { default as isArguments } from './isArguments'
-export { default as isArrayBuffer } from './isArrayBuffer'
-export { default as isArray } from './isArray'
-export { default as isBoolean } from './isBoolean'
-export { default as isDataView } from './isDataView'
-export { default as isDate } from './isDate'
-export { default as isDeepEqual } from './isDeepEqual'
-export { default as isError } from './isError'
-export { default as isFiniteNumber } from './isFiniteNumber'
-export { default as isFloat32Array } from './isFloat32Array'
-export { default as isFloat64Array } from './isFloat64Array'
-export { default as isFunction } from './isFunction'
-export { default as isGeneratorFunction } from './isGeneratorFunction'
-export { default as isInfiniteNumber } from './isInfiniteNumber'
-export { default as isInt16Array } from './isInt16Array'
-export { default as isInt32Array } from './isInt32Array'
-export { default as isInt8Array } from './isInt8Array'
-export { default as isMap } from './isMap'
-export { default as isNegativeInfinity } from './isNegativeInfinity'
-export { default as isNumber } from './isNumber'
-export { default as isObject } from './isObject'
-export { default as isPositiveInfinity } from './isPositiveInfinity'
-export { default as isRegExp } from './isRegExp'
-export { default as isSet } from './isSet'
-export { default as isString } from './isString'
-export { default as isSymbol } from './isSymbol'
-export { default as isUint16Array } from './isUint16Array'
-export { default as isUint32Array } from './isUint32Array'
-export { default as isUint8Array } from './isUint8Array'
-export { default as isUint8ClampedArray } from './isUint8ClampedArray'
-export { default as isUndefined } from './isUndefined'
-export { default as isWeakMap } from './isWeakMap'
-export { default as isWeakSet } from './isWeakSet'
+Object.defineProperty(exports, '__esModule', {
+	value: true
+})
+
+exports.expectArguments = require('./expectArguments')
+exports.expectArrayBuffer = require('./expectArrayBuffer')
+exports.expectArray = require('./expectArray')
+exports.expectArrayOfLength = require('./expectArrayOfLength')
+exports.expectAtLeast = require('./expectAtLeast')
+exports.expectAtMost = require('./expectAtMost')
+exports.expectBoolean = require('./expectBoolean')
+exports.expectDataView = require('./expectDataView')
+exports.expectDate = require('./expectDate')
+exports.expectDeepEqual = require('./expectDeepEqual')
+exports.expectEqual = require('./expectEqual')
+exports.expectError = require('./expectError')
+exports.expectFalse = require('./expectFalse')
+exports.expectFalsy = require('./expectFalsy')
+exports.expectFiniteNumber = require('./expectFiniteNumber')
+exports.expectFloat32Array = require('./expectFloat32Array')
+exports.expectFloat64Array = require('./expectFloat64Array')
+exports.expectFunction = require('./expectFunction')
+exports.expectFunctionOfArity = require('./expectFunctionOfArity')
+exports.expectGeneratorFunction = require('./expectGeneratorFunction')
+exports.expectInfiniteNumber = require('./expectInfiniteNumber')
+exports.expectInt16Array = require('./expectInt16Array')
+exports.expectInt32Array = require('./expectInt32Array')
+exports.expectInt8Array = require('./expectInt8Array')
+exports.expectLessThan = require('./expectLessThan')
+exports.expectLooseEqual = require('./expectLooseEqual')
+exports.expectMap = require('./expectMap')
+exports.expectMoreThan = require('./expectMoreThan')
+exports.expectNaN = require('./expectNaN')
+exports.expectNegativeInfinity = require('./expectNegativeInfinity')
+exports.expectNotEqual = require('./expectNotEqual')
+exports.expectNull = require('./expectNull')
+exports.expectNumber = require('./expectNumber')
+exports.expectObject = require('./expectObject')
+exports.expectOwnProperty = require('./expectOwnProperty')
+exports.expectPositiveInfinity = require('./expectPositiveInfinity')
+exports.expectProperty = require('./expectProperty')
+exports.expectRegExp = require('./expectRegExp')
+exports.expectSet = require('./expectSet')
+exports.expectString = require('./expectString')
+exports.expectSymbol = require('./expectSymbol')
+exports.expectTrue = require('./expectTrue')
+exports.expectTruthy = require('./expectTruthy')
+exports.expectUint16Array = require('./expectUint16Array')
+exports.expectUint32Array = require('./expectUint32Array')
+exports.expectUint8Array = require('./expectUint8Array')
+exports.expectUint8ClampedArray = require('./expectUint8ClampedArray')
+exports.expectUndefined = require('./expectUndefined')
+exports.expectWeakMap = require('./expectWeakMap')
+exports.expectWeakSet = require('./expectWeakSet')
+exports.hasOwnProperty = require('./hasOwnProperty')
+exports.inspect = require('./inspect')
+exports.isArguments = require('./isArguments')
+exports.isArrayBuffer = require('./isArrayBuffer')
+exports.isArray = require('./isArray')
+exports.isBoolean = require('./isBoolean')
+exports.isDataView = require('./isDataView')
+exports.isDate = require('./isDate')
+exports.isDeepEqual = require('./isDeepEqual')
+exports.isError = require('./isError')
+exports.isFiniteNumber = require('./isFiniteNumber')
+exports.isFloat32Array = require('./isFloat32Array')
+exports.isFloat64Array = require('./isFloat64Array')
+exports.isFunction = require('./isFunction')
+exports.isGeneratorFunction = require('./isGeneratorFunction')
+exports.isInfiniteNumber = require('./isInfiniteNumber')
+exports.isInt16Array = require('./isInt16Array')
+exports.isInt32Array = require('./isInt32Array')
+exports.isInt8Array = require('./isInt8Array')
+exports.isMap = require('./isMap')
+exports.isNegativeInfinity = require('./isNegativeInfinity')
+exports.isNumber = require('./isNumber')
+exports.isObject = require('./isObject')
+exports.isPositiveInfinity = require('./isPositiveInfinity')
+exports.isRegExp = require('./isRegExp')
+exports.isSet = require('./isSet')
+exports.isString = require('./isString')
+exports.isSymbol = require('./isSymbol')
+exports.isUint16Array = require('./isUint16Array')
+exports.isUint32Array = require('./isUint32Array')
+exports.isUint8Array = require('./isUint8Array')
+exports.isUint8ClampedArray = require('./isUint8ClampedArray')
+exports.isUndefined = require('./isUndefined')
+exports.isWeakMap = require('./isWeakMap')
+exports.isWeakSet = require('./isWeakSet')

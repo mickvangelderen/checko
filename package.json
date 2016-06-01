@@ -1,15 +1,15 @@
 {
   "author": {
-    "email": "NODE_PACKAGE_SKELETON_AUTHOR_EMAIL",
-    "name": "NODE_PACKAGE_SKELETON_AUTHOR_NAME",
-    "url": "NODE_PACKAGE_SKELETON_AUTHOR_URL"
+    "email": "mickvangelderen@gmail.com",
+    "name": "Mick van Gelderen",
+    "url": "https://github.com/mickvangelderen"
   },
   "dependencies": {},
-  "description": "NODE_PACKAGE_SKELETON_DESCRIPTION",
+  "description": "Simple modular predicates and assertions.",
   "devDependencies": {
-    "babel-cli": "^6.5.1",
-    "babel-core": "^6.5.2",
-    "babel-preset-es2015-node4": "^2.0.3",
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
     "babel-register": "^6.5.2",
     "chalk": "^1.1.1",
     "eslint": "^2.0.0",
@@ -28,14 +28,17 @@
     "npm": "^3.0.0"
   },
   "license": "MIT",
-  "main": "lib/index.js",
-  "name": "NODE_PACKAGE_SKELETON_NAME",
-  "repository": "NODE_PACKAGE_SKELETON_REPOSITORY",
+  "main": "exports/index.js",
+  "name": "checko",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mickvangelderen/checko.git"
+  },
   "scripts": {
-    "build": "babel src --out-dir lib --ignore \"*.test.js\"",
+    "build": "babel exports --out-dir build/exports --ignore \"*.test.js\" && cp package.json build/ && cp readme.md build/",
     "check-node-version": "babel-node tools/check-node-version",
-    "clean": "rm -rf lib",
-    "lint": "eslint src test",
+    "clean": "rm -rf build",
+    "lint": "eslint exports test",
     "post-checkout": "npm run -s resume",
     "post-merge": "npm run -s resume",
     "pre-commit": "npm run -s sort -- --error-on-changes && npm test",

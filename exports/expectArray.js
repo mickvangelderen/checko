@@ -1,9 +1,9 @@
-import inspect from './inspect'
-import isArray from './isArray'
+const inspect = require('./inspect')
+const isArray = require('./isArray')
 
 function expectArray(value) {
 	if (isArray(value)) return value
 	throw new TypeError(`Expected ${inspect(value)} to be an Array.`)
 }
 
-export default expectArray
+module.exports = expectArray

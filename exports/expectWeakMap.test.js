@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-import expectWeakMap from './expectWeakMap'
-import expect from 'must'
-import relativePath from '../test/relativePath'
+const expectWeakMap = require('./expectWeakMap')
+const expect = require('must')
+const relativePath = require('../test/relativePath')
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

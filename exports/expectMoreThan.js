@@ -1,8 +1,8 @@
-import inspect from './inspect'
+const inspect = require('./inspect')
 
 function expectMoreThan(more, value) {
 	if (value > more) return value
-	throw new TypeError(`Expected ${inspect(value)} to be more than ${inspect(more)}.`)
+	throw new RangeError(`Expected ${inspect(value)} to be more than ${inspect(more)}.`)
 }
 
-export default expectMoreThan
+module.exports = expectMoreThan

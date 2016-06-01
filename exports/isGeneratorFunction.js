@@ -4,4 +4,4 @@ function isGeneratorFunction(value) {
 	return objectToString.call(value) === '[object GeneratorFunction]'
 }
 
-export default isGeneratorFunction
+module.exports = isGeneratorFunction

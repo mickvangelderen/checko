@@ -1,8 +1,8 @@
-import inspect from './inspect'
+const inspect = require('./inspect')
 
 function expectNull(value) {
 	if (value === null) return value
-	throw new TypeError(`Expected ${inspect(value)} to equal null.`)
+	throw new RangeError(`Expected ${inspect(value)} to equal null.`)
 }
 
-export default expectNull
+module.exports = expectNull

@@ -1,8 +1,8 @@
-import inspect from './inspect'
+const inspect = require('./inspect')
 
 function expectNaN(value) {
 	if (isNaN(value)) return value
-	throw new TypeError(`Expected ${inspect(value)} to be NaN.`)
+	throw new RangeError(`Expected ${inspect(value)} to be NaN.`)
 }
 
-export default expectNaN
+module.exports = expectNaN

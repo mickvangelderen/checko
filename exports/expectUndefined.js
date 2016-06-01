@@ -1,9 +1,9 @@
-import inspect from './inspect'
-import isUndefined from './isUndefined'
+const inspect = require('./inspect')
+const isUndefined = require('./isUndefined')
 
 function expectUndefined(value) {
 	if (isUndefined(value)) return value
-	throw new TypeError(`Expected ${inspect(value)} to equal undefined.`)
+	throw new RangeError(`Expected ${inspect(value)} to equal undefined.`)
 }
 
-export default expectUndefined
+module.exports = expectUndefined

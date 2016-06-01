@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-import isDataView from './isDataView'
-import expect from 'must'
-import relativePath from '../test/relativePath'
+const isDataView = require('./isDataView')
+const expect = require('must')
+const relativePath = require('../test/relativePath')
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

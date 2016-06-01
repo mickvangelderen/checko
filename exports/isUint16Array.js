@@ -4,4 +4,4 @@ function isUint16Array(value) {
 	return objectToString.call(value) === '[object Uint16Array]'
 }
 
-export default isUint16Array
+module.exports = isUint16Array

@@ -1,9 +1,9 @@
-import inspect from './inspect'
-import isInfiniteNumber from './isInfiniteNumber'
+const inspect = require('./inspect')
+const isInfiniteNumber = require('./isInfiniteNumber')
 
 function expectInfiniteNumber(value) {
 	if (isInfiniteNumber(value)) return value
-	throw new TypeError(`Expected ${inspect(value)} to be an infinite number.`)
+	throw new RangeError(`Expected ${inspect(value)} to be an infinite number.`)
 }
 
-export default expectInfiniteNumber
+module.exports = expectInfiniteNumber

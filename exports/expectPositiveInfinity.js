@@ -1,9 +1,9 @@
-import inspect from './inspect'
-import isPositiveInfinity from './isPositiveInfinity'
+const inspect = require('./inspect')
+const isPositiveInfinity = require('./isPositiveInfinity')
 
 function expectPositiveInfinity(value) {
 	if (isPositiveInfinity(value)) return value
-	throw new TypeError(`Expected ${inspect(value)} to be positive infinity.`)
+	throw new RangeError(`Expected ${inspect(value)} to be positive infinity.`)
 }
 
-export default expectPositiveInfinity
+module.exports = expectPositiveInfinity

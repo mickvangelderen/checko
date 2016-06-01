@@ -1,8 +1,7 @@
-
 /* eslint-env mocha */
-import isUint8Array from './isUint8Array'
-import expect from 'must'
-import relativePath from '../test/relativePath'
+const isUint8Array = require('./isUint8Array')
+const expect = require('must')
+const relativePath = require('../test/relativePath')
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

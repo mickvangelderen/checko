@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-import expectNotEqual from './expectNotEqual'
-import expect from 'must'
-import relativePath from '../test/relativePath'
+const expectNotEqual = require('./expectNotEqual')
+const expect = require('must')
+const relativePath = require('../test/relativePath')
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

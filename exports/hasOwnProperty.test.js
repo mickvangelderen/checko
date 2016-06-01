@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-import hasOwnProperty from './hasOwnProperty'
-import expect from 'must'
-import relativePath from '../test/relativePath'
+const hasOwnProperty = require('./hasOwnProperty')
+const expect = require('must')
+const relativePath = require('../test/relativePath')
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

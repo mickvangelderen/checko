@@ -5,4 +5,4 @@ const isFiniteNumber = Number.isFinite
 		return typeof value === 'number' && isFinite(value)
 	}
 
-export default isFiniteNumber
+module.exports = isFiniteNumber

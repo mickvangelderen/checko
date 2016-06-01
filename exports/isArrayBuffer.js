@@ -4,4 +4,4 @@ function isArrayBuffer(value) {
 	return objectToString.call(value) === '[object ArrayBuffer]'
 }
 
-export default isArrayBuffer
+module.exports = isArrayBuffer

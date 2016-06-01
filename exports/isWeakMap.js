@@ -4,4 +4,4 @@ function isWeakMap(value) {
 	return objectToString.call(value) === '[object WeakMap]'
 }
 
-export default isWeakMap
+module.exports = isWeakMap

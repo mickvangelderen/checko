@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-import expectNaN from './expectNaN'
-import expect from 'must'
-import relativePath from '../test/relativePath'
+const expectNaN = require('./expectNaN')
+const expect = require('must')
+const relativePath = require('../test/relativePath')
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

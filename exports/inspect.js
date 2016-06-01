@@ -1,3 +1,3 @@
-import { inspect } from 'util'
+const inspect = require('util').inspect
 
-export default inspect
+module.exports = inspect

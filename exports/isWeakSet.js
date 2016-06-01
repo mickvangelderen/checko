@@ -4,4 +4,4 @@ function isWeakSet(value) {
 	return objectToString.call(value) === '[object WeakSet]'
 }
 
-export default isWeakSet
+module.exports = isWeakSet
