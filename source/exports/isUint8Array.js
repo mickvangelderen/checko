@@ -4,4 +4,4 @@ function isUint8Array(value) {
 	return objectToString.call(value) === '[object Uint8Array]'
 }
 
-module.exports = isUint8Array
+export default isUint8Array

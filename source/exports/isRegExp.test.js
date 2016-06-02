@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-const isRegExp = require('./isRegExp')
-const expect = require('must')
-const relativePath = require('../test/relativePath')
+import isRegExp from './isRegExp'
+import expect from 'must'
+import relativePath from '../test/relativePath'
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

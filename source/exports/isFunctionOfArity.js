@@ -1,7 +1,7 @@
-const isFunction = require('./isFunction')
+import isFunction from './isFunction'
 
 function isFunctionOfArity(arity, value) {
 	return isFunction(value) && value.length === arity
 }
 
-module.exports = isFunctionOfArity
+export default isFunctionOfArity

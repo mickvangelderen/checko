@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-const expectTruthy = require('./expectTruthy')
-const expect = require('must')
-const relativePath = require('../test/relativePath')
+import expectTruthy from './expectTruthy'
+import expect from 'must'
+import relativePath from '../test/relativePath'
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-const isDeepEqual = require('./isDeepEqual')
-const expect = require('must')
-const relativePath = require('../test/relativePath')
+import isDeepEqual from './isDeepEqual'
+import expect from 'must'
+import relativePath from '../test/relativePath'
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

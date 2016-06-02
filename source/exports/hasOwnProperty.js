@@ -4,4 +4,4 @@ function hasOwnProperty(name, value) {
 	return objectHasOwnProperty.call(value, name)
 }
 
-module.exports = hasOwnProperty
+export default hasOwnProperty

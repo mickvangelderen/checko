@@ -1,9 +1,9 @@
 /* eslint-env mocha */
-const exported = require('./index')
-const expect = require('must')
-const relativePath = require('../test/relativePath')
-const basename = require('path').basename
-const readdirSync = require('fs').readdirSync
+import * as exported from './index'
+import expect from 'must'
+import relativePath from '../test/relativePath'
+import { basename } from 'path'
+import { readdirSync } from 'fs'
 
 describe(relativePath(__filename), () => {
 	it('should export all files', () => {
@@ -13,7 +13,7 @@ describe(relativePath(__filename), () => {
 		.map(file => basename(file, '.js'))
 		.filter(name => name !== 'index')
 		.forEach(name => {
-			expect(exported).to.have.ownProperty(name, require(`./${name}`))
+			expect(exported).to.have.ownProperty(name, require(`./${name}`).default)
 		})
 	})
 })

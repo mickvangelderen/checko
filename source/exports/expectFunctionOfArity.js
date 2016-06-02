@@ -1,5 +1,5 @@
-const expectEqual = require('./expectEqual')
-const expectFunction = require('./expectFunction')
+import expectEqual from './expectEqual'
+import expectFunction from './expectFunction'
 
 function expectFunctionOfArity(arity, value) {
 	expectFunction(value)
@@ -7,4 +7,4 @@ function expectFunctionOfArity(arity, value) {
 	return value
 }
 
-module.exports = expectFunctionOfArity
+export default expectFunctionOfArity

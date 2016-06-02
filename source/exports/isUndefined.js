@@ -4,4 +4,4 @@ function isUndefined(value) {
 	return value === u
 }
 
-module.exports = isUndefined
+export default isUndefined

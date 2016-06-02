@@ -4,4 +4,4 @@ function isSet(value) {
 	return objectToString.call(value) === '[object Set]'
 }
 
-module.exports = isSet
+export default isSet

@@ -1,7 +1,7 @@
-const isNumber = require('./isNumber')
+import isNumber from './isNumber'
 
 function isInfiniteNumber(value) {
 	return isNumber(value) && isFinite(value)
 }
 
-module.exports = isInfiniteNumber
+export default isInfiniteNumber

@@ -4,4 +4,4 @@ function isFloat32Array(value) {
 	return objectToString.call(value) === '[object Float32Array]'
 }
 
-module.exports = isFloat32Array
+export default isFloat32Array

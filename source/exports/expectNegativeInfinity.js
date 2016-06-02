@@ -1,9 +1,9 @@
-const inspect = require('./inspect')
-const isNegativeInfinity = require('./isNegativeInfinity')
+import inspect from './inspect'
+import isNegativeInfinity from './isNegativeInfinity'
 
 function expectNegativeInfinity(value) {
 	if (isNegativeInfinity(value)) return value
 	throw new RangeError(`Expected ${inspect(value)} to be negative infinity.`)
 }
 
-module.exports = expectNegativeInfinity
+export default expectNegativeInfinity

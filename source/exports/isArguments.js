@@ -4,4 +4,4 @@ function isArguments(value) {
 	return objectToString.call(value) === '[object Arguments]'
 }
 
-module.exports = isArguments
+export default isArguments

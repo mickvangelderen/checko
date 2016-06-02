@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-const expectFloat64Array = require('./expectFloat64Array')
-const expect = require('must')
-const relativePath = require('../test/relativePath')
+import expectFloat64Array from './expectFloat64Array'
+import expect from 'must'
+import relativePath from '../test/relativePath'
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

@@ -1,6 +1,6 @@
 /* eslint-env mocha */
-const expect = require('must')
-const inspect = require('util').inspect
+import expect from 'must'
+import { inspect } from 'util'
 
 function testCases(func, cases) {
 	cases.forEach(current => {
@@ -28,4 +28,4 @@ function testCases(func, cases) {
 	})
 }
 
-module.exports = testCases
+export default testCases

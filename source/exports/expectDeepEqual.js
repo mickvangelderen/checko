@@ -1,9 +1,9 @@
-const inspect = require('./inspect')
-const isDeepEqual = require('./isDeepEqual')
+import inspect from './inspect'
+import isDeepEqual from './isDeepEqual'
 
 function expectDeepEqual(equal, value) {
 	if (isDeepEqual(equal, value)) return value
 	throw new TypeError(`Expected ${inspect(value)} to recursively equal ${inspect(equal)}.`)
 }
 
-module.exports = expectDeepEqual
+export default expectDeepEqual

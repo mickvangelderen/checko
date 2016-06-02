@@ -37,6 +37,8 @@ import { expectArray } from 'checko'
 expectArray('this is not an array')
 ```
 
+> Tip: This package publishes source maps. Use [source-map-support](https://www.npmjs.com/package/source-map-support) to utilize them during development to get clearer stack traces. 
+
 # Documentation
 
 For some 'expect' variants there is no 'is' variant because the language itself provides an operator. 
@@ -47,7 +49,5 @@ For some 'expect' variants there is no 'is' variant because the language itself 
 | isArray(value)     | expectArray(value)           |
 
 All files in [exports/](exports/) can be directly included. Implementations for each predicate and assertion can be found there. Examples are shown in the accompanying `.test.js`. 
-
-I've refrained from using ES2015 modules because the code it transpiles to a lot harder to read. 
 
 Due to the simple nature of this package (except for the `isDeepEqual(expected, value)` implementation) there is no further documentation. If this is a problem, please let me know.

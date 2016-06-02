@@ -4,4 +4,4 @@ function isDate(value) {
 	return objectToString.call(value) === '[object Date]'
 }
 
-module.exports = isDate
+export default isDate

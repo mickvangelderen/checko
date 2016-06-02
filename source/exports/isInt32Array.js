@@ -4,4 +4,4 @@ function isInt32Array(value) {
 	return objectToString.call(value) === '[object Int32Array]'
 }
 
-module.exports = isInt32Array
+export default isInt32Array

@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-const expectMoreThan = require('./expectMoreThan')
-const expect = require('must')
-const relativePath = require('../test/relativePath')
+import expectMoreThan from './expectMoreThan'
+import expect from 'must'
+import relativePath from '../test/relativePath'
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

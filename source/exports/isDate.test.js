@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-const isDate = require('./isDate')
-const expect = require('must')
-const relativePath = require('../test/relativePath')
+import isDate from './isDate'
+import expect from 'must'
+import relativePath from '../test/relativePath'
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

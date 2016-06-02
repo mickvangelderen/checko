@@ -1,9 +1,9 @@
 /* eslint-env mocha */
-const expect = require('must')
-const expectArrayBuffer = require('./expectArrayBuffer')
-const inspect = require('./inspect')
-const relativePath = require('../test/relativePath')
-const testCases = require('../test/testCases')
+import expect from 'must'
+import expectArrayBuffer from './expectArrayBuffer'
+import inspect from './inspect'
+import relativePath from '../test/relativePath'
+import testCases from '../test/testCases'
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

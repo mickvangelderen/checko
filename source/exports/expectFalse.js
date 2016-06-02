@@ -1,8 +1,8 @@
-const inspect = require('./inspect')
+import inspect from './inspect'
 
 function expectFalse(value) {
 	if (value === false) return value
 	throw new RangeError(`Expected ${inspect(value)} to equal false.`)
 }
 
-module.exports = expectFalse
+export default expectFalse

@@ -1,7 +1,7 @@
-const relative = require('path').relative
+import { relative } from 'path'
 
 function relativePath(path) {
 	return relative(process.cwd(), path)
 }
 
-module.exports = relativePath
+export default relativePath

@@ -1,9 +1,9 @@
-const inspect = require('./inspect')
-const isSymbol = require('./isSymbol')
+import inspect from './inspect'
+import isSymbol from './isSymbol'
 
 function expectSymbol(value) {
 	if (isSymbol(value)) return value
 	throw new TypeError(`Expected ${inspect(value)} to be a Symbol.`)
 }
 
-module.exports = expectSymbol
+export default expectSymbol

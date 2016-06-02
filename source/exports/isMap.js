@@ -4,4 +4,4 @@ function isMap(value) {
 	return objectToString.call(value) === '[object Map]'
 }
 
-module.exports = isMap
+export default isMap

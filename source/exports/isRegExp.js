@@ -4,4 +4,4 @@ function isRegExp(value) {
 	return objectToString.call(value) === '[object RegExp]'
 }
 
-module.exports = isRegExp
+export default isRegExp

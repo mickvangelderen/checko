@@ -4,4 +4,4 @@ function isSymbol(value) {
 	return objectToString.call(value) === '[object Symbol]'
 }
 
-module.exports = isSymbol
+export default isSymbol

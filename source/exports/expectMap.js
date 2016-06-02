@@ -1,9 +1,9 @@
-const inspect = require('./inspect')
-const isMap = require('./isMap')
+import inspect from './inspect'
+import isMap from './isMap'
 
 function expectMap(value) {
 	if (isMap(value)) return value
 	throw new TypeError(`Expected ${inspect(value)} to be a Map.`)
 }
 
-module.exports = expectMap
+export default expectMap

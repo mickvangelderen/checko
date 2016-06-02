@@ -1,8 +1,8 @@
 
 /* eslint-env mocha */
-const expectGeneratorFunction = require('./expectGeneratorFunction')
-const expect = require('must')
-const relativePath = require('../test/relativePath')
+import expectGeneratorFunction from './expectGeneratorFunction'
+import expect from 'must'
+import relativePath from '../test/relativePath'
 
 describe(relativePath(__filename), () => {
 	it('should export a function', () => {

@@ -1,9 +1,9 @@
-const inspect = require('./inspect')
-const isDataView = require('./isDataView')
+import inspect from './inspect'
+import isDataView from './isDataView'
 
 function expectDataView(value) {
 	if (isDataView(value)) return value
 	throw new TypeError(`Expected ${inspect(value)} to be a DataView.`)
 }
 
-module.exports = expectDataView
+export default expectDataView

@@ -102,4 +102,4 @@ function _check(expected, value, checked) {
 	checked.push([ expected, value ])
 }
 
-module.exports = isDeepEqual
+export default isDeepEqual
