@@ -1,57 +1,45 @@
-<div align="center">
-    <img src="media/gecko.jpg" alt="Checko the gecko"/>
-    <p>There is a new sherrif in town to check your values for type and range errors! :police_car:</p>
-</div>
+This readme is for package developers. Package users should [look here](source/). 
 
-# Motivation
+# Organization
 
-I needed predicates and assertions for type and range checking that:
+The source code for this package lives in [`source/`](source/). The package is built to the `build/` directory which is ignored by git. This architecture allows:
 
- * have a fast and simple implementation,
- * only check for what their name implies,
- * yield standard errors,
- * yield readable stack traces,
- * can be included when needed,
- * can be used to create custom predicates and assertions and
- * do.not.use.this.style()
+1. Having an identical file structure between the source and build.
+1. Having different build and test dependencies. 
+1. Building multiple versions of the package for specific Node.js environments or the browser. While the architecture supports this, it has not been implemented for this package.
 
-# Installation
+# Testing
 
-`npm install checko`
+Its code can be tested during development without building the package. A continuous integration service builds and tests the built version of the package. 
 
-# Usage
+# Building
 
-Import any of the exported predicates and assertions and simply use them. 
+The package consists of a number of resources which are transpiled, transformed and copied. 
 
-```js
-const expectArray = require('checko/exports/expectArray')
-// or
-const expectArray = require('checko').expectArray
-// or
-import expectArray from 'checko/exports/expectArray'
-// or
-import { expectArray } from 'checko'
+## JavaScript
+
+Modern JavaScript is transpiled using [Babel](https://babeljs.io/).
+
+## package.json
+
+The `scripts` and `private` properties are removed. The `devDependencies` matching `/^babel-/` are removed. 
+
+## readme.md, .npmignore
+
+These files are simply copied.
+
+# Publishing
+
+To publish a new version of this package you need to update its version, build it and publish it. This procedure is usually done with the following commands.
+
+```bash
+cd source/
+npm version patch
+cd ..
+git push
+# *Check if continuous integration builds succeed.*
+npm run build
+cd build/
+npm publish
 ```
 
-# Documentation
-
-For some 'expect' variants there is no 'is' variant because the language itself provides an operator. 
-
-| Predicate          | Assertion                    |
-|--------------------|------------------------------|
-| value === expected | expectEqual(expected, value) |
-| isArray(value)     | expectArray(value)           |
-
-All files in [exports/](exports/) can be directly included. Implementations for each predicate and assertion can be found there. Examples are shown in the accompanying `.test.js`. 
-
-I've refrained from using ES2015 modules because the code it transpiles to a lot harder to read. 
-
-Due to the simple nature of this package (except for the `isDeepEqual(expected, value)` implementation) there is no further documentation. If this is a problem, please let me know.
-
-# Thanks
-
-This project uses [node-package-skeleton](https://github.com/mickvangelderen/node-package-skeleton) as a starting point for package development. 
-
-# Other documents
-
-* [Developers' guide](developers.md)

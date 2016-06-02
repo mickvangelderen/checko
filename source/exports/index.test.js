@@ -9,7 +9,7 @@ describe(relativePath(__filename), () => {
 	it('should export all files', () => {
 		expect(exported).to.be.an.object()
 		readdirSync(__dirname)
-		.filter(file => !/\.test\.js$/.test(file))
+		.filter(file => /\.js$/.test(file) && /\.test\.js$/.test(file) === false)
 		.map(file => basename(file, '.js'))
 		.filter(name => name !== 'index')
 		.forEach(name => {
