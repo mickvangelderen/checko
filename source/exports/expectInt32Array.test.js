@@ -1,11 +1,8 @@
-
 /* eslint-env mocha */
 import expectInt32Array from './expectInt32Array'
-import expect from 'must'
 import relativePath from '../test/relativePath'
+import expectTypeTest from '../test/expectTypeTest'
 
 describe(relativePath(__filename), () => {
-	it('should export a function', () => {
-		expect(expectInt32Array).to.be.a.function()
-	})
+	expectTypeTest('isOfTypeInt32Array', expectInt32Array)
 })

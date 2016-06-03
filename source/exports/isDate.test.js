@@ -1,11 +1,8 @@
-
 /* eslint-env mocha */
 import isDate from './isDate'
-import expect from 'must'
 import relativePath from '../test/relativePath'
+import isTypeTest from '../test/isTypeTest'
 
 describe(relativePath(__filename), () => {
-	it('should export a function', () => {
-		expect(isDate).to.be.a.function()
-	})
+	isTypeTest('isOfTypeDate', isDate)
 })

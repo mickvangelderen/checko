@@ -1,8 +1,8 @@
 /* eslint-env mocha */
-import expectEqual from './expectEqual'
+import expectNotLooseEqual from './expectNotLooseEqual'
 import relativePath from '../test/relativePath'
 import expectComparisonTest from '../test/expectComparisonTest'
 
 describe(relativePath(__filename), () => {
-	expectComparisonTest((expected, value) => value === expected, expectEqual)
+	expectComparisonTest((expected, value) => value != expected, expectNotLooseEqual)
 })

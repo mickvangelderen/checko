@@ -1,11 +1,8 @@
-
 /* eslint-env mocha */
 import expectSet from './expectSet'
-import expect from 'must'
 import relativePath from '../test/relativePath'
+import expectTypeTest from '../test/expectTypeTest'
 
 describe(relativePath(__filename), () => {
-	it('should export a function', () => {
-		expect(expectSet).to.be.a.function()
-	})
+	expectTypeTest('isOfTypeSet', expectSet)
 })

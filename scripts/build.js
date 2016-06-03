@@ -51,6 +51,17 @@ function build({
 		outputFilePath: join(outputDirectoryPath, 'package.json')
 	})
 
+	// Build .eslintrc.json.
+	createFileTransformerSync(
+		createJsonTransformer(
+			transformEslint
+		)
+	)({
+		workingDirectoryPath,
+		inputFilePath: join(inputDirectoryPath, '.eslintrc.json'),
+		outputFilePath: join(outputDirectoryPath, '.eslintrc.json')
+	})
+
 	// Build mocha.opts
 	createFileTransformerSync(
 		input => input.toString().replace('--compilers js:babel-register', '')
@@ -93,4 +104,21 @@ function transformDevDependencies(devDependencies) {
 		map[key] = devDependencies[key]
 		return map
 	}, {})
+}
+
+function transformEslint() {
+	return {
+		"env": {
+			"es6": true,
+			"node": true
+		},
+		"rules": {
+			"no-constant-condition": 0
+		},
+		"globals": {
+			"regeneratorRuntime": true
+		},
+		"extends": "eslint:recommended",
+		"root": true
+	}
 }

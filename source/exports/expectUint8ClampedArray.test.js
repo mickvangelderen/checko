@@ -1,11 +1,8 @@
-
 /* eslint-env mocha */
 import expectUint8ClampedArray from './expectUint8ClampedArray'
-import expect from 'must'
 import relativePath from '../test/relativePath'
+import expectTypeTest from '../test/expectTypeTest'
 
 describe(relativePath(__filename), () => {
-	it('should export a function', () => {
-		expect(expectUint8ClampedArray).to.be.a.function()
-	})
+	expectTypeTest('isOfTypeUint8ClampedArray', expectUint8ClampedArray)
 })

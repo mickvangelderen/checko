@@ -1,11 +1,8 @@
-
 /* eslint-env mocha */
 import expectFloat64Array from './expectFloat64Array'
-import expect from 'must'
 import relativePath from '../test/relativePath'
+import expectTypeTest from '../test/expectTypeTest'
 
 describe(relativePath(__filename), () => {
-	it('should export a function', () => {
-		expect(expectFloat64Array).to.be.a.function()
-	})
+	expectTypeTest('isOfTypeFloat64Array', expectFloat64Array)
 })

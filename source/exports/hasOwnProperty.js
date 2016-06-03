@@ -1,4 +1,4 @@
-const objectHasOwnProperty = Object.prototype.toString
+const objectHasOwnProperty = Object.prototype.hasOwnProperty
 
 function hasOwnProperty(name, value) {
 	return objectHasOwnProperty.call(value, name)

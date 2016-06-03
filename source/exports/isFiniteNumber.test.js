@@ -1,11 +1,8 @@
-
 /* eslint-env mocha */
 import isFiniteNumber from './isFiniteNumber'
-import expect from 'must'
 import relativePath from '../test/relativePath'
+import isTypeTest from '../test/isTypeTest'
 
 describe(relativePath(__filename), () => {
-	it('should export a function', () => {
-		expect(isFiniteNumber).to.be.a.function()
-	})
+	isTypeTest('isFiniteNumber', isFiniteNumber)
 })

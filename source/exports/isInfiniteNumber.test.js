@@ -1,11 +1,8 @@
-
 /* eslint-env mocha */
 import isInfiniteNumber from './isInfiniteNumber'
-import expect from 'must'
 import relativePath from '../test/relativePath'
+import isTypeTest from '../test/isTypeTest'
 
 describe(relativePath(__filename), () => {
-	it('should export a function', () => {
-		expect(isInfiniteNumber).to.be.a.function()
-	})
+	isTypeTest('isInfiniteNumber', isInfiniteNumber)
 })

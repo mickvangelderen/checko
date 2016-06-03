@@ -1,11 +1,8 @@
-
 /* eslint-env mocha */
 import expectDataView from './expectDataView'
-import expect from 'must'
 import relativePath from '../test/relativePath'
+import expectTypeTest from '../test/expectTypeTest'
 
 describe(relativePath(__filename), () => {
-	it('should export a function', () => {
-		expect(expectDataView).to.be.a.function()
-	})
+	expectTypeTest('isOfTypeDataView', expectDataView)
 })

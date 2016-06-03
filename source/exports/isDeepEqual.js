@@ -1,4 +1,7 @@
 const objectToString = Object.prototype.toString
+import isNaN from './isNaN'
+import isObject from './isObject'
+import isFunction from './isFunction'
 
 function isDeepEqual(expected, value) {
 	return _isDeepEqual(expected, value, [ [], [] ])
@@ -33,7 +36,7 @@ function _isDeepEqual(expected, value, checked) {
 	}
 
 	// At this point non-objects are inequal.
-	if (typeof expected !== 'object' || expected === null) return false
+	if (!isObject(expected)) return false
 
 	return _isObjectDeepEqual(expected, value, checked)
 }
@@ -48,7 +51,7 @@ function _isArrayDeepEqual(expected, value, checked) {
 	if (value.length !== expected.length) return false
 
 	for (let i = 0; i < expected.length; i++) {
-		if (!_isDeepEqual(value[i], expected[i])) return false
+		if (!_isDeepEqual(value[i], expected[i], checked)) return false
 	}
 
 	return true
@@ -67,10 +70,10 @@ function _isObjectDeepEqual(expected, value, checked) {
 
 	if (species) {
 		// Allow custom equality function.
-		if (typeof species.equal === 'function') return species.equal(expected, value)
+		if (isFunction(species.equal)) return species.equal(expected, value)
 
 		// Allow custom comparison function.
-		if (typeof species.compare === 'function') return species.compare(expected, value) === 0
+		if (isFunction(species.compare)) return species.compare(expected, value) === 0
 	}
 
 	// Something that is most likely iterable.
@@ -92,7 +95,8 @@ function _isObjectDeepEqual(expected, value, checked) {
 }
 
 function _isChecked(expected, value, checked) {
-	for (let pair of checked) {
+	for (let i = 0; i < checked.length; i++) {
+		const pair = checked[i]
 		if (pair[0] === expected && pair[1] === value) return true
 	}
 	return false

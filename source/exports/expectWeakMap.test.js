@@ -1,11 +1,8 @@
-
 /* eslint-env mocha */
 import expectWeakMap from './expectWeakMap'
-import expect from 'must'
 import relativePath from '../test/relativePath'
+import expectTypeTest from '../test/expectTypeTest'
 
 describe(relativePath(__filename), () => {
-	it('should export a function', () => {
-		expect(expectWeakMap).to.be.a.function()
-	})
+	expectTypeTest('isOfTypeWeakMap', expectWeakMap)
 })

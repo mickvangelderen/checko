@@ -1,4 +1,5 @@
 import inspect from './inspect'
+import isNaN from './isNaN'
 
 function expectNaN(value) {
 	if (isNaN(value)) return value

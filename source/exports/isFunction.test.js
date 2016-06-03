@@ -1,11 +1,8 @@
-
 /* eslint-env mocha */
 import isFunction from './isFunction'
-import expect from 'must'
 import relativePath from '../test/relativePath'
+import isTypeTest from '../test/isTypeTest'
 
 describe(relativePath(__filename), () => {
-	it('should export a function', () => {
-		expect(isFunction).to.be.a.function()
-	})
+	isTypeTest('isFunction', isFunction)
 })

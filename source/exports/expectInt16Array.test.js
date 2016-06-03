@@ -1,11 +1,8 @@
-
 /* eslint-env mocha */
 import expectInt16Array from './expectInt16Array'
-import expect from 'must'
 import relativePath from '../test/relativePath'
+import expectTypeTest from '../test/expectTypeTest'
 
 describe(relativePath(__filename), () => {
-	it('should export a function', () => {
-		expect(expectInt16Array).to.be.a.function()
-	})
+	expectTypeTest('isOfTypeInt16Array', expectInt16Array)
 })
