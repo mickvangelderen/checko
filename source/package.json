@@ -30,7 +30,8 @@
     "preversion": "npm run test",
     "resume": "npm prune && npm update && npm dedupe && npm outdate --long",
     "test": "npm run lint && mocha \"{exports,test}/**/*.test.js\"",
+    "version": "scripts/version.sh",
     "watch": "mocha --watch \"{exports,test}/**/*.test.js\" --growl"
   },
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
