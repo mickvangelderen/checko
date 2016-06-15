@@ -1,9 +1,10 @@
 import createFileTransformerSync from './lib/createFileTransformerSync'
 import createJsonTransformer from './lib/createJsonTransformer'
 import guardSpawnSync from './lib/guardSpawnSync'
+import sortObject from 'sort-object-circular'
 import { join } from 'path'
-import { resolve } from 'path'
 import { relative } from 'path'
+import { resolve } from 'path'
 import { spawnSync } from 'child_process'
 
 const workingDirectoryPath = join(__dirname, '..')
@@ -43,7 +44,8 @@ function build({
 	// Build package.json.
 	createFileTransformerSync(
 		createJsonTransformer(
-			createPackageTransformer({ packageName, engines })
+			createPackageTransformer({ packageName, engines }),
+			{ sort: true }
 		)
 	)({
 		workingDirectoryPath,
@@ -54,7 +56,8 @@ function build({
 	// Build .eslintrc.json.
 	createFileTransformerSync(
 		createJsonTransformer(
-			transformEslint
+			transformEslint,
+			{ sort: true }
 		)
 	)({
 		workingDirectoryPath,
