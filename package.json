@@ -13,7 +13,7 @@
   "scripts": {
     "build": "babel-node scripts/build",
     "clean": "rm -rf build/",
-    "lint": "eslint source --ignore-pattern \"node_modules/\"",
+    "lint": "eslint .",
     "resume": "npm prune && npm update && npm dedupe && npm outdate --long",
     "setup": "babel-node scripts/hooks install",
     "sort": "babel-node scripts/sort",

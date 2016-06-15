@@ -25,11 +25,12 @@
     "url": "https://github.com/mickvangelderen/checko.git"
   },
   "scripts": {
-    "lint": "eslint \"{exports,test}/**/*.js\"",
+    "lint": "eslint .",
     "prepublish": "npm run test",
     "preversion": "npm run test",
     "resume": "npm prune && npm update && npm dedupe && npm outdate --long",
-    "test": "npm run lint && mocha \"{exports,test}/**/*.test.js\""
+    "test": "npm run lint && mocha \"{exports,test}/**/*.test.js\"",
+    "watch": "mocha --watch \"{exports,test}/**/*.test.js\" --growl"
   },
   "version": "0.1.0"
 }

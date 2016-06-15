@@ -69,7 +69,7 @@ const jsonResults = glob.sync('**/{.babelrc,*.json}', {
 	})
 })
 
-const linesResults = glob.sync('**/{.gitignore,.npmignore}', {
+const linesResults = glob.sync('**/{.eslintignore,.gitignore,.npmignore}', {
 	cwd: workingDirectoryPath,
 	ignore: [
 		'**/node_modules/**',
