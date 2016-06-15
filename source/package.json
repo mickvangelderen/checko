@@ -33,5 +33,5 @@
     "version": "scripts/version.sh",
     "watch": "mocha --watch \"{exports,test}/**/*.test.js\" --growl"
   },
-  "version": "0.1.1"
+  "version": "0.1.2"
 }
