@@ -15,7 +15,7 @@
     "clean": "rm -rf build/",
     "lint": "eslint .",
     "resume": "npm prune && npm update && npm dedupe && npm outdate --long",
-    "setup": "babel-node scripts/hooks install",
+    "setup": "git config push.followTags true && babel-node scripts/hooks install",
     "sort": "babel-node scripts/sort",
     "test": "babel-node scripts/test"
   }
