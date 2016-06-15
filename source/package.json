@@ -4,9 +4,7 @@
     "name": "Mick van Gelderen",
     "url": "https://github.com/mickvangelderen"
   },
-  "dependencies": {
-    "chalk": "^1.1.3"
-  },
+  "dependencies": {},
   "description": "Simple modular predicates and assertions.",
   "devDependencies": {
     "babel-cli": "^6.9.0",
