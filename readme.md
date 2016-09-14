@@ -1,4 +1,10 @@
-NPS_DESCRIPTION
+Sometimes simplicity is key. I find that to be the case for assertion libraries as well. There are tonnes of them out there and most of them come with all kinds of crazy features and implementations. These make it relatively difficult to understand what exactly is being tested, how to use the library to create your own assertions and to compose new predicates and assertions out of the existing ones.
+
+The predicates and assertions in checko
+
+ * have predictable names,
+ * have simple implementations,
+ * and can be composed.
 
 # Documentation
 
