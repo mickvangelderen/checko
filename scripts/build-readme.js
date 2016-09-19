@@ -1,9 +1,10 @@
-import remark from 'remark'
-import { version } from '../package.json'
 import { createReadStream } from 'fs'
 import { createWriteStream } from 'fs'
+import { name } from '../package.json'
 import { renameSync } from 'fs'
+import { version } from '../package.json'
 import guardedSpawnSync from '../scripts/utility/guardedSpawnSync'
+import remark from 'remark'
 
 const HEADING_VALUE = 'Documentation'
 const README_FILE = 'readme.md'
@@ -15,7 +16,7 @@ const AST_REPLACEMENT = {
 	}, {
 		type: 'link',
 		title: `Documentation for ${version}`,
-		url: `https://mickvangelderen.github.io/function/${version}/`,
+		url: `https://mickvangelderen.github.io/${name}/${version}/`,
 		children: [{
 			type: 'text',
 			value: 'here'
