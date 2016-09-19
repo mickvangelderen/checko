@@ -2,13 +2,13 @@ Sometimes simplicity is key. I find that to be the case for assertion libraries 
 
 The predicates and assertions in checko
 
- * have predictable names,
- * have simple implementations,
- * and can be composed.
+-   have predictable names,
+-   have simple implementations,
+-   and can be composed.
 
 # Documentation
 
-A link will be generated here.
+Documentation for 1.0.0 can be found [here](https://mickvangelderen.github.io/function/1.0.0/ "Documentation for 1.0.0").
 
 # Contributing
 
