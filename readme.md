@@ -8,7 +8,7 @@ The predicates and assertions in checko
 
 # Documentation
 
-Documentation for 1.0.0 can be found [here](https://mickvangelderen.github.io/function/1.0.0/ "Documentation for 1.0.0").
+Documentation for 1.0.1 can be found [here](https://mickvangelderen.github.io/checko/1.0.1/ "Documentation for 1.0.1").
 
 # Contributing
 

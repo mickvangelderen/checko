@@ -47,5 +47,5 @@
     "test": "mocha \"*.test.js\"",
     "version": "babel-node scripts/build-documentation && babel-node scripts/build-readme && babel-node scripts/build-examples"
   },
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
